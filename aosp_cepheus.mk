@@ -31,7 +31,7 @@ $(call inherit-product-if-exists, vendor/gapps/gapps.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 
 # Device identifier
-PRODUCT_NAME := revengeos_cepheus
+PRODUCT_NAME := aosp_cepheus
 PRODUCT_DEVICE := cepheus
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi 9
