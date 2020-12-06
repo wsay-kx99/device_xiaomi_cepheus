@@ -22,13 +22,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/cepheus/device.mk)
 
 # Inherit some common Revenge stuff.
-$(call inherit-product, vendor/aosp/config/common.mk)
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Inherit GApps if exsits
-$(call inherit-product-if-exists, vendor/gapps/gapps.mk)
+#$(call inherit-product-if-exists, vendor/gapps/gapps.mk)
 
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 1080
+
+TARGET_FACE_UNLOCK := true
 
 # Device identifier
 PRODUCT_NAME := aosp_cepheus
@@ -36,3 +38,6 @@ PRODUCT_DEVICE := cepheus
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi 9
 PRODUCT_MANUFACTURER := Xiaomi
+
+# Include firmware
+$(call inherit-product, vendor/xiaomi/firmware/cepheus/firmware.mk)
